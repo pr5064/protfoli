@@ -1,0 +1,95 @@
+:root {
+  --bg: black;
+  --text: white;
+  --accent: #00ffc3;
+}
+body.light-mode {
+  --bg: #f9f9f9;
+  --text: #111;
+  --accent: #0077ff;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.5s ease;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+canvas#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+section {
+  padding: 4rem;
+  scroll-snap-align: start;
+  position: relative;
+  z-index: 2;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.hero span {
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
+.about, .timeline, .projects, .contact {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 800px;
+}
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+p, li {
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.project-card {
+  border: 1px solid var(--accent);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.toggle-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+}
+#themeToggle {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.typed-text {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+.cursor {
+  display: inline-block;
+  background-color: var(--accent);
+  width: 2px;
+  height: 1.2rem;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
