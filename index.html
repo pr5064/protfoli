@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P.SREESHANTHREDDY | Electronics Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+    }
+    .hero span, .about-box, .quote-card, .skill-grid, .timeline-container, .progress-box, .project-grid, .cert-grid {
+      margin: 0 auto;
+    }
+    .quote-card, .progress-box, .about-box, .cert-card, .project-card, .timeline-item {
+      max-width: 600px;
+    }
+    .timeline-container {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .project-grid, .cert-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="toggle-container">
+    <button id="themeToggle">Toggle Theme</button>
+  </div>
+
+  <section class="hero">
+    <h1>Hello, I'm <span>Sreeshanth Reddy</span></h1>
+    <p class="tagline">"From logic gates to system-on-chip — I build futures, one bit at a time."</p>
+    <p><span class="typed-text"></span><span class="cursor">|</span></p>
+    <a href="#certificates" class="cert-button">🎓 View Certificates</a>
+  </section>
+
+  <section class="about">
+    <h2>👨‍💻 About Me</h2>
+    <div class="about-box">
+      <p>I’m an ECE student at SRM, diving deep into VLSI, RTL Design, and chip innovation. I combine curiosity with execution – building projects from scratch and documenting the journey.</p>
+    </div>
+  </section>
+
+  <section class="quote">
+    <h2>🧠 Quote of the Day</h2>
+    <div class="quote-card">
+      <p id="quoteText">"Electronics is the poetry of logic."</p>
+      <span class="quote-decorator">— Sreeshanth</span>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>🔬 My Chip Lab</h2>
+    <div class="skill-grid">
+      <div class="skill">Verilog</div>
+      <div class="skill">Digital Logic</div>
+      <div class="skill">K-Maps</div>
+      <div class="skill">RTL Design</div>
+      <div class="skill">MUX/Encoders</div>
+      <div class="skill">SystemVerilog</div>
+      <div class="skill">Chip Packaging</div>
+      <div class="skill">EDA Tools</div>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <h2>📚 Learning Timeline</h2>
+    <div class="timeline-container">
+      <div class="timeline-item">✅ Digital Logic Done<br><span>May 2025</span></div>
+      <div class="timeline-item">🚀 PreviBook Launched<br><span>May 2025</span></div>
+      <div class="timeline-item">🌉 BridgeVolt Started<br><span>June 2025</span></div>
+      <div class="timeline-item">🎯 Internship Target<br><span>2026</span></div>
+    </div>
+  </section>
+
+  <section class="tracker">
+    <h2>📅 Daily Progress</h2>
+    <div class="progress-box">
+      <p>🕒 Day <span id="dayCount"></span> of VLSI Prep</p>
+      <p>📗 Currently Reading: <strong>Morris Mano</strong></p>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>🔧 Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>PreviBook</h3>
+        <p>An e-commerce platform built for empowering local businesses. Built using HTML, CSS, JS.</p>
+        <a href="https://github.com/pr5064" target="_blank">Live Demo →</a>
+      </div>
+      <div class="project-card">
+        <h3>BridgeVolt</h3>
+        <p>A simulation to harvest energy from vehicle vibrations using piezo tech. Dash UI in progress.</p>
+        <a href="#" target="_blank">Preview →</a>
+      </div>
+    </div>
+  </section>
+
+ <section id="certificates">
+  <h2>📜 Certificates</h2>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <h3>Chip Packaging</h3>
+      <p>Intro to Semiconductor Chip Packaging<br><strong>Arizona State University</strong><br><small>November 13, 2024</small></p>
+    </div>
+    <div class="cert-card">
+      <h3>Verilog Design</h3>
+      <p>30-day Digital Design using Verilog</p>
+    </div>
+    <div class="cert-card">
+      <h3>AI Tools Workshop</h3>
+      <p>Creating presentations, analyzing data, and debugging with AI tools<br><strong>BE10X</strong><br><small>May 4, 2025</small></p>
+    </div>
+    <div class="cert-card">
+      <h3>Basics of VLSI</h3>
+      <p>Digital Electronics & VLSI fundamentals<br><strong>NIT Calicut</strong><br><small>April 14, 2025</small></p>
+    </div>
+    <div class="cert-card">
+      <h3>Future-Agile Banking & AI</h3>
+      <p>Exploring AI and modern banking systems using building blocks<br><strong>SRM University</strong><br><small>March 26, 2025</small></p>
+    </div>
+    <div class="cert-card">
+      <h3>Prompt Crafting</h3>
+      <p>How AI models respond to structured prompts<br><strong>Intellect Club – SRM</strong><br><small>February 15, 2025</small></p>
+    </div>
+    <div class="cert-card">
+      <h3>STM-32 Skill Development</h3>
+      <p>Hands-on session with STM-32 microcontroller<br><strong>DCDC Club – SRM</strong><br><small>October 8, 2025</small></p>
+    </div>
+    <div class="cert-card">
+      <h3>Young Innovator Internship Challenge</h3>
+      <p>Selected in top 100 out of 1000+ applications; focused on self-development<br><strong>Scaler School of Technology</strong><br><small>June 14, 2024</small></p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="contact">
+    <h2>📧 Contact Me</h2>
+    <p>GitHub: <a href="https://github.com/pr5064" target="_blank">pr5064</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/p-sreeshanth-reddy-5a47761a9" target="_blank">Sreeshanth Reddy</a></p>
+    <p>Email: <a href="mailto:sreeshanth0224@gmail.com">sreeshanth0224@gmail.com</a></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
